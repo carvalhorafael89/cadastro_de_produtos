@@ -1,6 +1,6 @@
 import { produto_int } from '../src/produto_interface';
 
-export const mockalunos: produto_int[] = [
+export const mockprodutos: produto_int[] = [
   { id: 1,
     nome: 'Teclado Maicroscorft',
     preço: 210.00,

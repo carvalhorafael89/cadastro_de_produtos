@@ -1,6 +1,8 @@
+import { mockprodutos } from './../../mock_produtos';
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../../produto_service';
 import { produto_int } from '../../produto_interface';
+
 
 @Component({
   selector: 'app-produtos',
@@ -16,8 +18,9 @@ export class ProdutosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getProdutos(): void {
-    this.produtos = this.produtoservice.getProdutos();
+  getHeroes(): void {
+    this.produtoservice.getProdutos()
+        .subscribe(produtos => this.produtos = produtos);
   }
 
 }

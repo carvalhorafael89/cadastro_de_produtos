@@ -13,14 +13,21 @@ export class ProdutosComponent implements OnInit {
 
   constructor(private produtoservice: ProdutoService ) {}
 
-  produtos?: produto_int[]
+  produtos?: produto_int;
+
+  lista_produtos = mockprodutos;
 
   ngOnInit(): void {
   }
 
   getHeroes(): void {
     this.produtoservice.getProdutos()
-        .subscribe(produtos => this.produtos = produtos);
+        .subscribe(produtos => this.lista_produtos = produtos);
+  }
+
+  seleciona(lista_produtos: produto_int): void
+  {
+    this.produtos = lista_produtos;
   }
 
 }

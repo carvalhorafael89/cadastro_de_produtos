@@ -1,1 +1,41 @@
-<p>produtos works!</p>
+<h2><p>Produtos</p></h2>
+
+<div class="div_lateral">
+<table>
+    <tr>
+        <td class="cabeçalho"><strong>Id</strong></td>
+        <td class="cabeçalho"><strong>Nome</strong></td>
+        <td class="cabeçalho"><strong>Preço</strong></td>
+        <td class="cabeçalho"><strong>Descrição</strong></td>
+        <td class="cabeçalho"><strong>Tipo</strong></td>
+        <td class="cabeçalho"><strong>Marca</strong></td>
+
+    </tr>
+
+    <tr class="botao" *ngFor="let produto of lista_produtos" (click)="seleciona(produto)">
+        <td>{{produto.id}}</td>
+        <td>{{produto.nome}}</td>
+        <td>{{produto.preco}}</td>
+        <td>{{produto.descricao}}</td>
+        <td>{{produto.tipo}}</td>
+        <td>{{produto.marca}}</td>
+    </tr>
+</table>
+
+<div *ngIf="produtos" class="detalhes">
+    <h2>Detalhes do Produto(a)</h2>
+    <h2>{{ produtos.nome| uppercase }}</h2>
+
+        <div>
+            <label for="nome">Nome do Produto: </label>
+            <input class="input" id="nome" [(ngModel)] = "produtos.nome" placeholder="Nome" type="text">
+        </div>
+        <div class="details">
+            <label for="descricao">Descrição do Produto: </label>
+            <input class="input" id="descricao" [(ngModel)] = "produtos.descricao" placeholder="Descrição" type="text">
+        </div>
+        <div class="details">
+            <label for="preco">Preço: </label>
+            <input class="input" id="Preço" [(ngModel)] = "produtos.preco" placeholder="Preço" type="text">
+        </div>
+</div>

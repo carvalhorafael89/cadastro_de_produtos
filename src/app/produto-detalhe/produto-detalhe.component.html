@@ -1,1 +1,33 @@
-<p>produto-detalhe works!</p>
+<div *ngIf="selprod" class="div_lateral">
+    <h2>Detalhes do Produto(a)</h2>
+
+<h3>{{ selprod.nome | uppercase }}</h3>
+
+    <div>
+        <label for="nome">Nome do Produto: </label>
+        <input class="input_geral" id="nome" style="margin-left: 2.5vw;" [(ngModel)] = "selprod.nome" placeholder="Nome" type="text">
+    </div>
+
+    <div>
+        <label for="preco">Preço: </label>
+        <input class="input_geral" style="margin-left: 7.7vw;" id="preco" [(ngModel)] = "selprod.preco" placeholder="Preço" type="text">
+    </div>
+
+    <div>
+        <label for="tipo">Tipo: </label>
+        <input class="input_geral" id="tipo" style="margin-left: 8.2vw;" [(ngModel)] = "selprod.tipo" placeholder="Tipo" type="text">
+    </div>
+
+    <div>
+        <label for="marca">Marca: </label>
+        <input class="input_geral" id="marca" style="margin-left: 7.5vw;" [(ngModel)] = "selprod.marca" placeholder="Marca" type="text">
+    </div>
+
+    <div>
+        <label for="descricao">Descrição do Produto: </label>
+        <input class="input_descrição" id="descricao" style="margin-left: 1vw;" [(ngModel)] = "selprod.descricao" placeholder="Descrição" type="text">
+    </div>
+
+
+</div>
+

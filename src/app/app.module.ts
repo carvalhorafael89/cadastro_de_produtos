@@ -16,7 +16,7 @@ import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

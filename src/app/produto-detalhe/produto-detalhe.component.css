@@ -1,0 +1,23 @@
+.div_lateral{
+    background-color: rgb(103, 174, 255);
+    display: flex;
+    flex-flow: column wrap;
+    width:fit-content;
+}
+
+.input_geral{
+    background-color: rgb(255, 168, 222);
+}
+
+.input_descrição{
+    background-color: rgb(255, 168, 222);
+    width: 55vw;
+}
+
+.detalhes{
+    background-color: rgb(255, 246, 215);
+    align-content: center;
+    justify-content: center;
+    height: 4vw;
+    width: 30vw;
+}

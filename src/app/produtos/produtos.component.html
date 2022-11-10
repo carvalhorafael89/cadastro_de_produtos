@@ -9,33 +9,17 @@
         <td class="cabeçalho"><strong>Tipo</strong></td>
         <td class="cabeçalho"><strong>Marca</strong></td>
         <td class="cabeçalho"><strong>Descrição</strong></td>
-
     </tr>
 
-    <tr class="botao" *ngFor="let produto of lista_produtos" (click)="seleciona(produto)">
+    <tr class="botao" *ngFor="let produto of lista_produtos" (click)="onselect(produto)">
         <td>{{produto.id}}</td>
         <td>{{produto.nome}}</td>
-        <td>{{produto.preco}}</td>
+        <td>R${{produto.preco}}</td>
         <td>{{produto.tipo}}</td>
         <td>{{produto.marca}}</td>
         <td>{{produto.descricao}}</td>
     </tr>
 </table>
-
-<div *ngIf="produtos" class="detalhes">
-    <h2>Detalhes do Produto(a)</h2>
-    <h2>{{ produtos.nome| uppercase }}</h2>
-
-        <div>
-            <label for="nome">Nome do Produto: </label>
-            <input class="input" id="nome" [(ngModel)] = "produtos.nome" placeholder="Nome" type="text">
-        </div>
-        <div class="details">
-            <label for="descricao">Descrição do Produto: </label>
-            <input class="input" id="descricao" [(ngModel)] = "produtos.descricao" placeholder="Descrição" type="text">
-        </div>
-        <div class="details">
-            <label for="preco">Preço: </label>
-            <input class="input" id="Preço" [(ngModel)] = "produtos.preco" placeholder="Preço" type="text">
-        </div>
 </div>
+
+<div><app-detalhes-produtos [selprod]="seleciona_produto"></app-detalhes-produtos></div>

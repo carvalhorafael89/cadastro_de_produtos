@@ -11,7 +11,7 @@ export class ProdutoService {
 
   constructor() { }
 
-  getProdutos(): Observable<produto_int[]> {
+  getprodutos(): Observable<produto_int[]> {
     const produto = of(mockprodutos);
     return produto;
   }
